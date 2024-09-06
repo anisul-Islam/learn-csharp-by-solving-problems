@@ -38,6 +38,31 @@
 
 ### **10. String Concatenation Operator**
 
+### Final Problem for Operators
+
+- Unit Converter Using Operators in C#**
+
+**Objective:** This assignment will help you practice using operators and data type conversion in a real-life scenario. You will create a simple unit converter that allows users to convert between different units of measurement (e.g., kilometers to miles, Celsius to Fahrenheit) using arithmetic operators.
+
+#### **Instructions:**
+
+1. **Create a C# Console Application.**
+
+2. **Implement Unit Conversion Calculations:**
+   - Convert between kilometers and miles.
+   - Convert between Celsius and Fahrenheit.
+   - Convert between kilograms and pounds.
+
+3. **Use Arithmetic Operators for Conversions:**
+   - Use multiplication, division, and addition operators to perform the conversions.
+
+4. **Prompt the User for Input:**
+   - Ask the user to enter the value.
+
+5. **Display the Conversion Result:**
+   - Show the user the converted value.
+   - 
+
 ## Topic 1: If-else related problems and solutions
 
 ### **Problem 1: Temperature Check**
