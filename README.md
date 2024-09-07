@@ -105,6 +105,31 @@
 
 **Problem:** Write a program that checks if a withdrawal can be made from a bank account. If the account balance is greater than or equal to the withdrawal amount, print "Withdrawal successful." Otherwise, print "Insufficient funds."
 
+### Final Assignment for if-else
+
+- Unit Converter Using Operators in C#**
+
+**Objective:** This assignment will help you practice using operators and data type conversion in a real-life scenario. You will create a simple unit converter that allows users to convert between different units of measurement (e.g., kilometers to miles, Celsius to Fahrenheit) using arithmetic operators.
+
+#### **Instructions:**
+
+1. **Create a C# Console Application.**
+
+2. **Implement Unit Conversion Calculations:**
+   - Convert between kilometers and miles.
+   - Convert between Celsius and Fahrenheit.
+   - Convert between kilograms and pounds.
+
+3. **Use Arithmetic Operators for Conversions:**
+   - Use multiplication, division, and addition operators to perform the conversions.
+
+4. **Prompt the User for Input:**
+   - Ask the user to enter the value and the type of conversion they want to perform.
+
+5. **Display the Conversion Result:**
+   - Show the user the converted value.
+
+
 ## Topic 2: switch related problems and solutions
 
 ### **Problem 1: Day of the Week**
