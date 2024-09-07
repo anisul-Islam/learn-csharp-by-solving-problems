@@ -136,483 +136,41 @@
 
 **Problem:** Write a program that takes an integer (1-7) as input and prints the corresponding day of the week. 1 for Monday, 2 for Tuesday, and so on. If the input is not between 1 and 7, print "Invalid day."
 
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter a number (1-7) to get the day of the week: ");
-        int day = int.Parse(Console.ReadLine());
-
-        switch (day)
-        {
-            case 1:
-                Console.WriteLine("Monday");
-                break;
-            case 2:
-                Console.WriteLine("Tuesday");
-                break;
-            case 3:
-                Console.WriteLine("Wednesday");
-                break;
-            case 4:
-                Console.WriteLine("Thursday");
-                break;
-            case 5:
-                Console.WriteLine("Friday");
-                break;
-            case 6:
-                Console.WriteLine("Saturday");
-                break;
-            case 7:
-                Console.WriteLine("Sunday");
-                break;
-            default:
-                Console.WriteLine("Invalid day.");
-                break;
-        }
-    }
-}
-```
-
----
-
 ### **Problem 2: Simple Calculator**
 
 **Problem:** Write a program that performs a simple arithmetic operation (+, -, \*, /) based on user input. The user will input two numbers and an operator. The program should print the result of the operation.
-
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter the first number: ");
-        double num1 = double.Parse(Console.ReadLine());
-
-        Console.Write("Enter an operator (+, -, *, /): ");
-        char op = char.Parse(Console.ReadLine());
-
-        Console.Write("Enter the second number: ");
-        double num2 = double.Parse(Console.ReadLine());
-
-        switch (op)
-        {
-            case '+':
-                Console.WriteLine($"Result: {num1 + num2}");
-                break;
-            case '-':
-                Console.WriteLine($"Result: {num1 - num2}");
-                break;
-            case '*':
-                Console.WriteLine($"Result: {num1 * num2}");
-                break;
-            case '/':
-                if (num2 != 0)
-                {
-                    Console.WriteLine($"Result: {num1 / num2}");
-                }
-                else
-                {
-                    Console.WriteLine("Cannot divide by zero.");
-                }
-                break;
-            default:
-                Console.WriteLine("Invalid operator.");
-                break;
-        }
-    }
-}
-```
-
----
 
 ### **Problem 3: Coffee Shop Menu**
 
 **Problem:** Write a program that simulates a coffee shop menu. The user inputs a number (1-4) corresponding to a menu item: 1 for "Espresso", 2 for "Latte", 3 for "Cappuccino", and 4 for "Americano". The program should print the selected item.
 
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Coffee Menu:");
-        Console.WriteLine("1. Espresso");
-        Console.WriteLine("2. Latte");
-        Console.WriteLine("3. Cappuccino");
-        Console.WriteLine("4. Americano");
-
-        Console.Write("Select a coffee by entering a number (1-4): ");
-        int choice = int.Parse(Console.ReadLine());
-
-        switch (choice)
-        {
-            case 1:
-                Console.WriteLine("You selected Espresso.");
-                break;
-            case 2:
-                Console.WriteLine("You selected Latte.");
-                break;
-            case 3:
-                Console.WriteLine("You selected Cappuccino.");
-                break;
-            case 4:
-                Console.WriteLine("You selected Americano.");
-                break;
-            default:
-                Console.WriteLine("Invalid choice.");
-                break;
-        }
-    }
-}
-```
-
----
-
 ### **Problem 4: Grade to Letter Conversion**
 
 **Problem:** Write a program that converts a numeric grade into a letter grade. The user inputs a grade (0-100), and the program outputs the corresponding letter grade: A (90-100), B (80-89), C (70-79), D (60-69), F (0-59).
-
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter your numeric grade (0-100): ");
-        int grade = int.Parse(Console.ReadLine());
-
-        switch (grade / 10)
-        {
-            case 10:
-            case 9:
-                Console.WriteLine("Your grade is A.");
-                break;
-            case 8:
-                Console.WriteLine("Your grade is B.");
-                break;
-            case 7:
-                Console.WriteLine("Your grade is C.");
-                break;
-            case 6:
-                Console.WriteLine("Your grade is D.");
-                break;
-            default:
-                Console.WriteLine("Your grade is F.");
-                break;
-        }
-    }
-}
-```
-
----
 
 ### **Problem 5: Season Finder**
 
 **Problem:** Write a program that determines the season based on the month number (1-12). The program should print "Winter" for December, January, February; "Spring" for March, April, May; "Summer" for June, July, August; and "Autumn" for September, October, November.
 
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter the month number (1-12): ");
-        int month = int.Parse(Console.ReadLine());
-
-        switch (month)
-        {
-            case 12:
-            case 1:
-            case 2:
-                Console.WriteLine("Winter");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                Console.WriteLine("Spring");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                Console.WriteLine("Summer");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                Console.WriteLine("Autumn");
-                break;
-            default:
-                Console.WriteLine("Invalid month number.");
-                break;
-        }
-    }
-}
-```
-
----
-
 ### **Problem 6: Vehicle Type**
 
 **Problem:** Write a program that takes a single character input representing a vehicle type ('C' for Car, 'B' for Bus, 'M' for Motorcycle, 'T' for Truck) and prints the corresponding vehicle type. If the input is not one of these, print "Unknown vehicle type."
-
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter the vehicle type (C, B, M, T): ");
-        char vehicleType = char.Parse(Console.ReadLine().ToUpper());
-
-        switch (vehicleType)
-        {
-            case 'C':
-                Console.WriteLine("Car");
-                break;
-            case 'B':
-                Console.WriteLine("Bus");
-                break;
-            case 'M':
-                Console.WriteLine("Motorcycle");
-                break;
-            case 'T':
-                Console.WriteLine("Truck");
-                break;
-            default:
-                Console.WriteLine("Unknown vehicle type.");
-                break;
-        }
-    }
-}
-```
-
----
 
 ### **Problem 7: Grade Point Average (GPA)**
 
 **Problem:** Write a program that converts a letter grade (A, B, C, D, F) into a grade point value (4, 3, 2, 1, 0). If the input is not one of these letters, print "Invalid grade."
 
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter your letter grade (A, B, C, D, F): ");
-        char grade = char.Parse(Console.ReadLine().ToUpper());
-
-        switch (grade)
-        {
-            case 'A':
-                Console.WriteLine("GPA: 4.0");
-                break;
-            case 'B':
-                Console.WriteLine("GPA: 3.0");
-                break;
-            case 'C':
-                Console.WriteLine("GPA: 2.0");
-                break;
-            case 'D':
-                Console.WriteLine("GPA: 1.0");
-                break;
-            case 'F':
-                Console.WriteLine("GPA: 0.0");
-                break;
-            default:
-                Console.WriteLine("Invalid grade.");
-                break;
-        }
-    }
-}
-```
-
----
-
 ### **Problem 8: Restaurant Tip Calculator**
 
 **Problem:** Write a program that calculates the tip based on service quality. The user inputs a service quality level (1-3): 1 for "Poor", 2 for "Good", and 3 for "Excellent". The program should calculate the tip as 10%, 15%, and 20% of the bill respectively.
-
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter the total bill amount: ");
-        double bill = double.Parse(Console.ReadLine());
-
-        Console.WriteLine("Rate the service quality (1 for Poor, 2 for Good, 3 for Excellent): ");
-        int serviceQuality = int.Parse(Console.ReadLine());
-
-        double tip = 0;
-
-        switch (serviceQuality)
-        {
-            case 1:
-                tip = bill * 0.10;
-                break;
-            case 2:
-                tip = bill * 0.15;
-                break;
-            case 3:
-                tip = bill * 0.20;
-                break;
-            default:
-                Console.WriteLine("Invalid service quality rating.");
-                return;
-        }
-
-        Console.Write
-
-Line($"The tip amount is ${tip:F2}");
-    }
-}
-```
-
----
 
 ### **Problem 9: Month Name Finder**
 
 **Problem:** Write a program that takes an integer (1-12) as input and prints the corresponding month name. If the input is not between 1 and 12, print "Invalid month."
 
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Enter a number (1-12) to get the month name: ");
-        int month = int.Parse(Console.ReadLine());
-
-        switch (month)
-        {
-            case 1:
-                Console.WriteLine("January");
-                break;
-            case 2:
-                Console.WriteLine("February");
-                break;
-            case 3:
-                Console.WriteLine("March");
-                break;
-            case 4:
-                Console.WriteLine("April");
-                break;
-            case 5:
-                Console.WriteLine("May");
-                break;
-            case 6:
-                Console.WriteLine("June");
-                break;
-            case 7:
-                Console.WriteLine("July");
-                break;
-            case 8:
-                Console.WriteLine("August");
-                break;
-            case 9:
-                Console.WriteLine("September");
-                break;
-            case 10:
-                Console.WriteLine("October");
-                break;
-            case 11:
-                Console.WriteLine("November");
-                break;
-            case 12:
-                Console.WriteLine("December");
-                break;
-            default:
-                Console.WriteLine("Invalid month.");
-                break;
-        }
-    }
-}
-```
-
----
-
 ### **Problem 10: Vending Machine**
 
 **Problem:** Write a program that simulates a simple vending machine. The user inputs a number (1-4) corresponding to a drink: 1 for "Coke", 2 for "Pepsi", 3 for "Water", and 4 for "Juice". The program should print the selected drink. If the input is not between 1 and 4, print "Invalid selection."
-
-**Solution:**
-
-```csharp
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Vending Machine:");
-        Console.WriteLine("1. Coke");
-        Console.WriteLine("2. Pepsi");
-        Console.WriteLine("3. Water");
-        Console.WriteLine("4. Juice");
-
-        Console.Write("Select a drink by entering a number (1-4): ");
-        int choice = int.Parse(Console.ReadLine());
-
-        switch (choice)
-        {
-            case 1:
-                Console.WriteLine("You selected Coke.");
-                break;
-            case 2:
-                Console.WriteLine("You selected Pepsi.");
-                break;
-            case 3:
-                Console.WriteLine("You selected Water.");
-                break;
-            case 4:
-                Console.WriteLine("You selected Juice.");
-                break;
-            default:
-                Console.WriteLine("Invalid selection.");
-                break;
-        }
-    }
-}
-```
-
----
-
-These problems and solutions are designed to help students understand the `switch` statement in C# by applying it to real-life scenarios. Each example demonstrates how `switch` can be used to simplify decision-making logic in a program.
-
-Here are two examples that demonstrate the shortcut (expression-bodied) syntax for `switch` statements in C#. This syntax is available starting from C# 8.0 and makes switch statements more concise and expressive.
-
----
 
 ### **Problem 11: Temperature Description**
 
@@ -654,7 +212,29 @@ class Program
 - This example uses the shortcut switch expression to evaluate the temperature and return a description string based on the temperature value.
 - The `=>` syntax is used to map each temperature range to a corresponding description.
 
----
+### Final Assignment for switch
+
+- Unit Converter Using Operators in C#**
+
+**Objective:** This assignment will help you practice using operators and data type conversion in a real-life scenario. You will create a simple unit converter that allows users to convert between different units of measurement (e.g., kilometers to miles, Celsius to Fahrenheit) using arithmetic operators.
+
+#### **Instructions:**
+
+1. **Create a C# Console Application.**
+
+2. **Implement Unit Conversion Calculations:**
+   - Convert between kilometers and miles.
+   - Convert between Celsius and Fahrenheit.
+   - Convert between kilograms and pounds.
+
+3. **Use Arithmetic Operators for Conversions:**
+   - Use multiplication, division, and addition operators to perform the conversions.
+
+4. **Prompt the User for Input:**
+   - Ask the user to enter the value and match the type of conversion they want to perform using switch.
+
+5. **Display the Conversion Result:**
+   - Show the user the converted value.
 
 ### **Problem 12: Simple Grade Evaluator**
 
@@ -692,17 +272,6 @@ class Program
     }
 }
 ```
-
-- This example uses the shortcut switch expression to evaluate the grade character and return a description string based on the grade value.
-- The `_` (default case) is used to handle any unexpected values, ensuring that the program can handle invalid inputs.
-
----
-
-These examples illustrate how the shortcut switch syntax can make code more concise and readable by eliminating the need for more verbose switch statements. This syntax is particularly useful for simple mappings between input values and results.
-
-## Topic 3: Loop related problems and solutions
-
----
 
 ### **Problem 1: Sum of First N Natural Numbers**
 
