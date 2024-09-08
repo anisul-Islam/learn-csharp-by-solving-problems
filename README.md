@@ -2058,7 +2058,7 @@ ID: 5, Name: Eva White, Position: Developer, Department: IT, Salary: $68,000.00
 
 This assignment provides a practical approach to working with CRUD operations, filtering, sorting, and pagination, giving you hands-on experience with data management in C#.
 
-### **Assignment: Vehicle Management System Using the Four Pillars of OOP in C#**
+## **Problem 6: Vehicle Management System Using the Four Pillars of OOP in C#**
 
 **Objective:** This assignment will help students practice the four main principles of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — in C#. Students will create a simple Vehicle Management System that manages different types of vehicles (Car, Bike, Truck), demonstrating each pillar of OOP.
 
@@ -2099,10 +2099,6 @@ This assignment provides a practical approach to working with CRUD operations, f
 6. **Main Program**:
    - Create instances of `Car`, `Bike`, and `Truck`.
    - Demonstrate calling their methods, especially focusing on polymorphic behavior.
-
-### **Expected Output**:
-
-Your code should demonstrate the four pillars of OOP by showing how different vehicles interact with the system.
 
 
 ### **Key Concepts Demonstrated in the Assignment:**
