@@ -578,7 +578,38 @@ class Program
 
 ---
 
-These problems and solutions should help students grasp the concept of loops in C# by applying them to real-life scenarios.
+### Assignment - Unit Converter with Loop
+
+Here's the adjusted assignment with input validation added directly into the main program logic without using methods:
+
+### **Final Assignment: Unit Converter Using Operators in C#**
+
+**Objective:** This assignment will help you practice using operators, data type conversion, and input validation in a real-life scenario. You will create a simple unit converter that allows users to convert between different units of measurement (e.g., kilometers to miles, Celsius to Fahrenheit) using arithmetic operators.
+
+### **Instructions:**
+
+1. **Create a C# Console Application.**
+   - Open your IDE (like Visual Studio or Visual Studio Code) and create a new C# Console Application project.
+
+2. **Implement Unit Conversion Calculations:**
+   - Implement conversions between:
+     - Kilometers and Miles.
+     - Celsius and Fahrenheit.
+     - Kilograms and Pounds.
+
+3. **Use Arithmetic Operators for Conversions:**
+   - Use multiplication, division, and addition operators to perform the conversions.
+
+4. **Prompt the User for Input:**
+   - Ask the user to enter the value and type of conversion they want to perform using a `switch` statement.
+
+5. **Add Input Validation:**
+   - Ensure the user inputs are valid for each conversion scenario.
+   - Display an error message if the input is invalid.
+   - Take the user input until we have a valid value.
+
+6. **Display the Conversion Result:**
+   - Show the user the converted value.
 
 ## Topic 4: Array related problems and solutions
 
