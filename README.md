@@ -2058,5 +2058,96 @@ ID: 5, Name: Eva White, Position: Developer, Department: IT, Salary: $68,000.00
 
 This assignment provides a practical approach to working with CRUD operations, filtering, sorting, and pagination, giving you hands-on experience with data management in C#.
 
+### **Assignment: Vehicle Management System Using the Four Pillars of OOP in C#**
 
+**Objective:** This assignment will help students practice the four main principles of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — in C#. Students will create a simple Vehicle Management System that manages different types of vehicles (Car, Bike, Truck), demonstrating each pillar of OOP.
+
+### **Assignment Instructions**
+
+1. **Create an Abstract Base Class (`Vehicle`)**:
+   - This class will serve as the base class for all types of vehicles in the system.
+   - Define the following properties: `Model`, `Year`, `FuelType`.
+   - Include an abstract method `DisplayInfo()` that must be implemented by derived classes.
+   - Include a method `Start()` that displays a start message.
+
+2. **Create Derived Classes (`Car`, `Bike`, and `Truck`) Using Inheritance**:
+   - **`Car` Class**:
+     - Inherit from `Vehicle`.
+     - Add a property `NumberOfDoors`.
+     - Implement the `DisplayInfo()` method to display the car’s information.
+   - **`Bike` Class**:
+     - Inherit from `Vehicle`.
+     - Add a property `HasCarrier`.
+     - Implement the `DisplayInfo()` method to display the bike’s information.
+   - **`Truck` Class**:
+     - Inherit from `Vehicle`.
+     - Add a property `LoadCapacity`.
+     - Implement the `DisplayInfo()` method to display the truck’s information.
+
+3. **Encapsulation**:
+   - Use private fields and public properties to encapsulate data within classes.
+   - Implement methods to manage specific behaviors of each vehicle type.
+
+4. **Abstraction**:
+   - Use abstract classes and methods to define common structure and behavior for all vehicles.
+   - Define an interface `IServiceable` that contains methods like `Service()` which will be implemented by all derived classes.
+
+5. **Polymorphism**:
+   - Demonstrate polymorphism by creating a method that accepts `Vehicle` objects and calls the `DisplayInfo()` method.
+   - Show how different vehicle types interact with the system through polymorphic behavior.
+
+6. **Main Program**:
+   - Create instances of `Car`, `Bike`, and `Truck`.
+   - Demonstrate calling their methods, especially focusing on polymorphic behavior.
+
+### **Expected Output**:
+
+Your code should demonstrate the four pillars of OOP by showing how different vehicles interact with the system.
+
+
+### **Key Concepts Demonstrated in the Assignment:**
+
+1. **Encapsulation**:
+   - Fields such as `model`, `year`, `fuelType`, `numberOfDoors`, `hasCarrier`, and `loadCapacity` are encapsulated within their respective classes.
+
+2. **Abstraction**:
+   - The `Vehicle` class is abstract, defining a contract for common behavior without specifying the implementation.
+   - The `IServiceable` interface abstracts the service action that all vehicles must provide.
+
+3. **Inheritance**:
+   - `Car`, `Bike`, and `Truck` inherit from `Vehicle`, reusing base class functionality and adding specific features.
+
+4. **Polymorphism**:
+   - The overridden `DisplayInfo()` method demonstrates different outputs based on the object type (Car, Bike, Truck).
+   - The `Start()` method shows shared behavior among all vehicles.
+
+### **Expected Output:**
+
+```
+Toyota Corolla is starting.
+Car Model: Toyota Corolla, Year: 2022, Fuel Type: Petrol, Doors: 4
+
+Yamaha is starting.
+Bike Model: Yamaha, Year: 2020, Fuel Type: Petrol, Carrier: Yes
+
+Volvo is starting.
+Truck Model: Volvo, Year: 2021, Fuel Type: Diesel, Load Capacity: 15.5 tons
+
+Car Model: Toyota Corolla, Year: 2022, Fuel Type: Petrol, Doors: 4
+Toyota Corolla car is being serviced.
+Bike Model: Yamaha, Year: 2020, Fuel Type: Petrol, Carrier: Yes
+Yamaha bike is being serviced.
+Truck Model: Volvo, Year: 2021, Fuel Type: Diesel, Load Capacity: 15.5 tons
+Volvo truck is being serviced.
+```
+
+### **Summary of the Assignment:**
+
+This assignment helps students practice and understand the four pillars of OOP in C#:
+- **Encapsulation** keeps data within classes secure and manageable.
+- **Abstraction** hides complex implementation details while providing essential interfaces.
+- **Inheritance** allows new classes to reuse and extend existing class functionality.
+- **Polymorphism** enables flexible and dynamic method invocation based on object types.
+
+This practical approach helps students learn how these OOP concepts work together in a cohesive and real-world application scenario.
 
