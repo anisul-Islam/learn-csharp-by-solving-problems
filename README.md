@@ -2147,3 +2147,86 @@ This assignment helps students practice and understand the four pillars of OOP i
 
 This practical approach helps students learn how these OOP concepts work together in a cohesive and real-world application scenario.
 
+## Assignment: Bank Account Management System Using the Four Pillars of OOP in C#
+
+- Objective: This assignment will help students practice the four main principles of Object-Oriented Programming (OOP) — Encapsulation, Abstraction, Inheritance, and Polymorphism — in C#. Students will create a Bank Account Management System that manages different types of bank accounts (Savings, Checking, Fixed Deposit), demonstrating each pillar of OOP.
+
+### Assignment Instructions
+
+1. Create an Abstract Base Class (BankAccount):
+   - This class will serve as the base class for all types of bank accounts in the system.
+   - Define the following properties: AccountNumber, AccountHolder, Balance.
+   - Include an abstract method CalculateInterest() that must be implemented by derived classes.
+   - Include methods Deposit() and Withdraw() to manage account transactions.
+
+2. Create Derived Classes for Specific Accounts Using Inheritance:
+   - SavingsAccount Class:
+      - Inherit from BankAccount.
+      - Add a property InterestRate.
+      - Implement the CalculateInterest() method specific to savings accounts.
+   - CheckingAccount Class:
+      - Inherit from BankAccount.
+      - Add a property OverdraftLimit.
+      - Implement the CalculateInterest() method as zero since checking accounts typically do not have interest.
+      Override the Withdraw() method to account for overdraft limits.
+   - FixedDepositAccount Class:
+      - Inherit from BankAccount.
+      - Add properties MaturityPeriod and FixedInterestRate.
+      - Implement the CalculateInterest() method specific to fixed deposits, considering the maturity period.
+
+3. Encapsulation:
+   - Use private fields and public properties to encapsulate data within classes.
+   - Implement methods to manage specific behaviors of each account type.
+
+4. Abstraction:
+   - Use abstract classes and methods to define common structure and behavior for all accounts.
+   - Define an interface IAccountActions that contains methods like Deposit(), Withdraw(), and CalculateInterest().
+
+5. Polymorphism:
+   - Demonstrate polymorphism by creating a method that accepts BankAccount objects and calls the CalculateInterest() method.
+   - Show how different accounts interact with the system through polymorphic behavior.
+
+6. Main Program:
+   - Create instances of SavingsAccount, CheckingAccount, and FixedDepositAccount.
+   - Demonstrate calling their methods, especially focusing on polymorphic behavior.
+  
+7. Output
+
+   ```
+      Account Number: SA12345
+      Account Holder: Alice
+      Balance: $1,000.00
+      Deposited $35.00 to Alice's account.
+      Interest of $35.00 added at 3.5% rate.
+      
+      Account Number: CA67890
+      Account Holder: Bob
+      Balance: $500.00
+      Withdrew $600.00 from Bob's account.
+      Checking accounts do not have interest.
+      
+      Account Number: FD54321
+      Account Holder: Charlie
+      Balance: $10,000.00
+      Fixed deposit interest of $500.00 calculated at 5.0% rate over 12 months.
+      
+      All accounts and their interests:
+      Account Number: SA12345
+      Account Holder: Alice
+      Balance: $1,035.00
+      Deposited $36.22 to Alice's account.
+      Interest of $36.22 added at 3.5% rate.
+      
+      Account Number: CA67890
+      Account Holder: Bob
+      Balance: $-100.00
+      Checking accounts do not have interest.
+      
+      Account Number: FD54321
+      Account Holder: Charlie
+      Balance: $10,000.00
+      Fixed deposit interest of $500.00 calculated at 5.0% rate over 12 months.
+
+   ```
+
+
