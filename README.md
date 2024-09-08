@@ -2190,6 +2190,44 @@ This practical approach helps students learn how these OOP concepts work togethe
    - Create instances of SavingsAccount, CheckingAccount, and FixedDepositAccount.
    - Demonstrate calling their methods, especially focusing on polymorphic behavior.
   
+     ```csharp
+      // Main program demonstrating Polymorphism
+      class Program
+      {
+          public static void Main()
+          {
+              // Create instances of SavingsAccount, CheckingAccount, and FixedDepositAccount
+              BankAccount savings = new SavingsAccount("SA12345", "Alice", 1000, 3.5m);
+              BankAccount checking = new CheckingAccount("CA67890", "Bob", 500, 200);
+              BankAccount fixedDeposit = new FixedDepositAccount("FD54321", "Charlie", 10000, 12, 5.0m);
+      
+              // Demonstrate polymorphism by calling methods on the abstract type
+              savings.DisplayAccountInfo();
+              savings.CalculateInterest();
+      
+              Console.WriteLine();
+      
+              checking.DisplayAccountInfo();
+              checking.Withdraw(600);  // Demonstrate overdraft
+              checking.CalculateInterest();
+      
+              Console.WriteLine();
+      
+              fixedDeposit.DisplayAccountInfo();
+              fixedDeposit.CalculateInterest();
+      
+              // Using an array of BankAccount objects to demonstrate polymorphism
+              Console.WriteLine("\nAll accounts and their interests:");
+              BankAccount[] accounts = { savings, checking, fixedDeposit };
+              foreach (BankAccount account in accounts)
+              {
+                  account.DisplayAccountInfo();
+                  account.CalculateInterest();
+              }
+          }
+      }
+     ```
+  
 7. Output
 
    ```
