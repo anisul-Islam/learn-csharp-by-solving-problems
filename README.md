@@ -2507,7 +2507,7 @@ Receipt generated for credit card payment.
 
 This project gives you hands-on experience with OOP in a practical, real-world context, highlighting the importance of good design principles in software development.
 
-### **Enhanced Project Assignment: Hotel Booking Management System with LINQ, Records, and CRUD Operations**
+### **Problem 10: Project Assignment: Hotel Booking Management System with LINQ, Records, and CRUD Operations**
 
 **Objective:** This assignment will help you understand the practical application of the four pillars of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — along with **interfaces**, **LINQ**, **records**, and **CRUD (Create, Read, Update, Delete)** operations in a real-world scenario. You will build a Hotel Booking Management System demonstrating these concepts.
 
@@ -2673,4 +2673,174 @@ This project integrates the four pillars of OOP with practical coding techniques
 
 This comprehensive assignment showcases the practical application of OOP concepts in building a real-world software system, equipping you with skills needed in professional software development.
 
+### **Problem 11 - Project Assignment: E-Commerce Platform Management System**
+
+**Objective:** This assignment will help you understand and apply the four pillars of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — along with **interfaces**, **LINQ**, **records**, and **CRUD (Create, Read, Update, Delete)** operations in a comprehensive real-world scenario. You will build an E-Commerce Platform Management System that includes inventory, customer orders, payment processing, and user management.
+
+### **Project Overview:**
+
+You will create an E-Commerce Platform Management System that manages product inventory, customer orders, payments, and user accounts. The system will demonstrate the use of OOP principles, CRUD operations, LINQ for data querying, and records for immutable data representation, offering a comprehensive learning experience.
+
+### **Instructions:**
+
+#### **1. Create the Base Classes, Interfaces, and Records**
+
+- **Define an abstract base class `Product`:**
+  - Properties: `ProductID`, `Name`, `Price`, `StockQuantity`.
+  - Abstract method `CalculateDiscount()` to be implemented by derived classes.
+
+- **Create an interface `IPayment`:**
+  - Define methods `ProcessPayment(decimal amount)` and `GenerateReceipt()`.
+
+- **Create a record `User`:**
+  - Define properties: `UserID`, `Username`, `Email`.
+  - Use the record to keep user data immutable once created.
+
+- **Create a record `Customer`:**
+  - Define properties: `CustomerID`, `Name`, `Email`, `Address`.
+  - Use the record to store customer details.
+
+#### **2. Implement Derived Classes Using Inheritance and Encapsulation**
+
+- **`ElectronicsProduct` Class:**
+  - Inherit from `Product`.
+  - Implement `CalculateDiscount()` with a fixed percentage discount.
+
+- **`ClothingProduct` Class:**
+  - Inherit from `Product`.
+  - Implement `CalculateDiscount()` with a different discount logic.
+
+- **`FoodProduct` Class:**
+  - Inherit from `Product`.
+  - Implement `CalculateDiscount()` based on expiration date proximity.
+
+#### **3. Create Classes for Order Management and Implement CRUD Operations**
+
+- **Create an `Order` Class:**
+  - Properties: `OrderID`, `Customer`, `Products`, `OrderDate`, `TotalAmount`, `IsPaid`.
+  - Methods: `CalculateTotalAmount()`, `AddProductToOrder()`, `RemoveProductFromOrder()`, `ConfirmOrder()`.
+  - Use a `List<Order>` to manage multiple orders and perform CRUD operations.
+
+- **Implement CRUD Operations:**
+  - **Create**: Add new orders to the list.
+  - **Read**: Display order details using LINQ queries.
+  - **Update**: Modify existing orders, such as changing quantities or adding/removing products.
+  - **Delete**: Cancel orders and remove them from the list.
+
+#### **4. Implement Payment Handling Using Interface**
+
+- **Create a `CreditCardPayment` Class:**
+  - Implement the `IPayment` interface.
+  - Define methods to process payments using credit cards and generate receipts.
+
+- **Create a `PayPalPayment` Class:**
+  - Implement the `IPayment` interface.
+  - Define methods to process payments via PayPal and generate receipts.
+
+#### **5. Main Program to Demonstrate the System with OOP Concepts**
+
+- **Demonstrate Encapsulation**:
+  - Use private fields and public properties to manage access to data in the `Product` and `Order` classes.
+
+- **Demonstrate Abstraction**:
+  - Use the abstract class `Product` and interface `IPayment` to hide complex details and provide a simplified interface.
+
+- **Demonstrate Inheritance**:
+  - Show how `ElectronicsProduct`, `ClothingProduct`, and `FoodProduct` inherit from `Product`.
+
+- **Demonstrate Polymorphism**:
+  - Use polymorphism to handle different types of products and payment methods through their base class or interface references.
+
+- **Demonstrate LINQ**:
+  - Use LINQ to filter orders, sort products by price, and search for available products.
+
+### **Sample Code Structure:**
+
+Here's a guided code structure to help you start the project.
+
+```csharp
+// Main program demonstrating OOP principles, CRUD operations, and LINQ
+class Program
+{
+    static List<Order> orders = new List<Order>();
+    static List<Product> products = new List<Product>();
+
+    static void Main(string[] args)
+    {
+        // Create sample products and customers
+        Product phone = new ElectronicsProduct { ProductID = 1, Name = "Smartphone", Price = 500, StockQuantity = 10 };
+        Product shirt = new ClothingProduct { ProductID = 2, Name = "T-Shirt", Price = 20, StockQuantity = 50 };
+        Product apple = new FoodProduct { ProductID = 3, Name = "Apple", Price = 1, StockQuantity = 100 };
+
+        products.AddRange(new List<Product> { phone, shirt, apple });
+
+        Customer customer1 = new(1, "Alice Johnson", "alice@example.com", "123 Elm Street");
+        Customer customer2 = new(2, "Bob Smith", "bob@example.com", "456 Oak Avenue");
+
+        // Create orders
+        CreateOrder(1, customer1, new List<Product> { phone, apple });
+        CreateOrder(2, customer2, new List<Product> { shirt });
+
+        // Display all orders
+        DisplayOrders();
+
+        // Update an order
+        UpdateOrder(1, new List<Product> { shirt });
+
+        // Display all orders after update
+        DisplayOrders();
+
+        // Cancel an order
+        CancelOrder(2);
+
+        // Display available products using LINQ
+        DisplayAvailableProducts();
+
+        // Process payment
+        IPayment payment =
+
+ new CreditCardPayment();
+        payment.ProcessPayment(300);
+        payment.GenerateReceipt();
+    }
+
+
+}
+```
+
+### **Expected Output:**
+
+```
+Processing credit card payment of $300.00.
+Receipt generated for credit card payment.
+
+--- All Orders ---
+Order ID: 1, Customer: Alice Johnson, Total: $451.00
+Order ID: 2, Customer: Bob Smith, Total: $17.00
+
+Order 1 updated successfully.
+
+--- All Orders ---
+Order ID: 1, Customer: Alice Johnson, Total: $17.00
+
+Order 2 has been canceled.
+
+--- Available Products ---
+Product: Smartphone, Price: $500.00, Stock: 9
+Product: T-Shirt, Price: $20.00, Stock: 49
+Product: Apple, Price: $1.00, Stock: 99
+```
+
+### **Summary of the Assignment:**
+
+This project integrates the four pillars of OOP with practical coding techniques such as CRUD operations, LINQ for querying, and records for immutable data management:
+
+- **Encapsulation**: Manages data access within classes to protect the state.
+- **Abstraction**: Simplifies complex logic through abstract classes and interfaces.
+- **Inheritance**: Allows product classes to inherit common behaviors and attributes.
+- **Polymorphism**: Uses interfaces and base classes to interact with different objects flexibly.
+- **LINQ**: Provides an efficient way to query and manipulate data within the system.
+- **Records**: Ensures user and customer data remain consistent and immutable once created.
+
+This comprehensive assignment showcases the practical application of OOP concepts in building a real-world e-commerce system, equipping you with skills needed in professional software development.
 
