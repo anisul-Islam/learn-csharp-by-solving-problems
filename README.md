@@ -2298,4 +2298,379 @@ This practical approach helps students learn how these OOP concepts work togethe
 
    ```
 
+### **Problem 8: School Management System Using the Four Pillars of OOP in C#**
+
+**Objective:** This assignment will help students practice the four main principles of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — in C#. Students will build a basic School Management System with classes representing people in a school (Person, Student, Teacher), demonstrating each pillar of OOP.
+
+### **Assignment Instructions**
+
+1. **Create an Abstract Base Class (`Person`)**:
+   - This class will serve as the foundation for all other types of people in the school.
+   - Define the following properties: `Name`, `Age`.
+   - Include an abstract method `DisplayInfo()` that must be implemented by derived classes.
+   - Include a method `Greet()` that displays a greeting message.
+
+2. **Create Derived Classes (`Student` and `Teacher`) Using Inheritance**:
+   - **`Student` Class**:
+     - Inherit from `Person`.
+     - Add a property `StudentID`.
+     - Implement the `DisplayInfo()` method to display the student’s information.
+   - **`Teacher` Class**:
+     - Inherit from `Person`.
+     - Add a property `Subject`.
+     - Implement the `DisplayInfo()` method to display the teacher’s information.
+
+3. **Encapsulation**:
+   - Use encapsulated fields with private access modifiers where appropriate.
+   - Use properties to manage access to private fields.
+
+4. **Abstraction**:
+   - Use abstract classes and methods to define common behavior for all people in the school.
+   - Define an interface `ISchoolMember` that contains a method `GetRole()` which will be implemented by `Student` and `Teacher`.
+
+5. **Polymorphism**:
+   - Demonstrate polymorphism by creating a method that accepts `Person` objects and calls the `DisplayInfo()` method.
+   - Show how polymorphism works with the `GetRole()` method from the `ISchoolMember` interface.
+
+6. **Main Program**:
+   - Create instances of `Student` and `Teacher`.
+   - Demonstrate calling their methods, especially focusing on polymorphic behavior.
+
+### **Expected Output**:
+
+Your code should demonstrate the concepts of OOP by showing how objects interact with each other using the four pillars of OOP.
+
+### **Key Concepts Demonstrated in the Assignment:**
+
+1. **Encapsulation**:
+   - The `name`, `age`, `studentID`, and `subject` fields are encapsulated within their respective classes, accessible only through properties.
+
+2. **Abstraction**:
+   - The `Person` class is abstract, defining a contract for common behavior without specifying the implementation.
+   - The `ISchoolMember` interface further abstracts roles, requiring derived classes to specify their own roles.
+
+3. **Inheritance**:
+   - `Student` and `Teacher` inherit from `Person`, reusing the base class functionality and adding their own specific features.
+
+4. **Polymorphism**:
+   - The overridden `DisplayInfo()` method shows different outputs depending on whether the object is a `Student` or a `Teacher`.
+   - The `Greet()` method is the same for both, demonstrating shared behavior.
+
+### **Expected Output:**
+
+```
+Hello, my name is Alice.
+Student Name: Alice, Age: 20, ID: S1234
+
+Hello, my name is Mr. Brown.
+Teacher Name: Mr. Brown, Age: 40, Subject: Mathematics
+
+Student:
+Student Name: Alice, Age: 20, ID: S1234
+Teacher:
+Teacher Name: Mr. Brown, Age: 40, Subject: Mathematics
+```
+
+### **Summary of the Assignment:**
+
+This assignment helps students practice and understand the four pillars of OOP in C#:
+- **Encapsulation** keeps data secure within classes.
+- **Abstraction** hides complex details and exposes only necessary parts.
+- **Inheritance** allows classes to build on one another.
+- **Polymorphism** lets objects be treated as their base type, simplifying code and enhancing flexibility.
+
+This practical approach helps students grasp how these concepts interconnect and are applied in real-world programming scenarios.
+
+### **Problem 9- Project Assignment: Hotel Booking Management System**
+
+**Objective:** This project assignment is designed to help you understand the practical application of the four pillars of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — along with the use of **interfaces** in a real-world scenario. You will build a Hotel Booking Management System that demonstrates how these OOP concepts help structure and manage complex software systems.
+
+### **Project Overview:**
+
+You will create a Hotel Booking Management System that allows users to manage room bookings, customer information, and payments. The system will handle different types of rooms (Standard, Deluxe, Suite) with specific features and pricing, demonstrating OOP principles and the use of interfaces.
+
+### **Instructions:**
+
+#### **1. Create the Base Classes and Interfaces**
+
+- **Define an abstract base class `Room`**:
+  - Properties: `RoomNumber`, `Price`, `IsAvailable`.
+  - Abstract method `CalculatePrice()` to be implemented by derived classes.
+  - Method `BookRoom()` to mark the room as booked.
+
+- **Create an interface `IPayment`**:
+  - Define methods `ProcessPayment(decimal amount)` and `GenerateReceipt()`.
+
+#### **2. Implement Derived Classes Using Inheritance and Encapsulation**
+
+- **`StandardRoom` Class**:
+  - Inherit from `Room`.
+  - Implement `CalculatePrice()` to set a fixed price per night.
+
+- **`DeluxeRoom` Class**:
+  - Inherit from `Room`.
+  - Implement `CalculatePrice()` with an additional feature cost (e.g., extra amenities).
+
+- **`SuiteRoom` Class**:
+  - Inherit from `Room`.
+  - Implement `CalculatePrice()` with a premium price including extra features (e.g., breakfast, gym access).
+
+#### **3. Create Classes for Customer and Booking Management**
+
+- **Create a `Customer` Class**:
+  - Properties: `Name`, `ContactInfo`, `CustomerID`.
+  - Use encapsulation to protect sensitive customer information.
+  - Implement a method `DisplayCustomerDetails()`.
+
+- **Create a `Booking` Class**:
+  - Properties: `BookingID`, `Room`, `Customer`, `CheckInDate`, `CheckOutDate`, `TotalAmount`.
+  - Methods: `CalculateTotalAmount()`, `ConfirmBooking()`, `CancelBooking()`.
+  - Use a `List<Booking>` to manage multiple bookings.
+
+#### **4. Implement Payment Handling Using Interface**
+
+- **Create a `CreditCardPayment` Class**:
+  - Implement the `IPayment` interface.
+  - Define methods to process payments using credit cards and generate receipts.
+
+- **Create a `PayPalPayment` Class**:
+  - Implement the `IPayment` interface.
+  - Define methods to process payments via PayPal and generate receipts.
+
+#### **5. Main Program to Demonstrate the System with OOP Concepts**
+
+- **Demonstrate Encapsulation**:
+  - Use private fields and public properties to manage access to data in the `Customer`, `Room`, and `Booking` classes.
+
+- **Demonstrate Abstraction**:
+  - Use the abstract class `Room` and interface `IPayment` to hide complex details and provide a simplified interface.
+
+- **Demonstrate Inheritance**:
+  - Show how `StandardRoom`, `DeluxeRoom`, and `SuiteRoom` inherit from `Room`, reusing base class functionality.
+
+- **Demonstrate Polymorphism**:
+  - Use polymorphism to handle different types of rooms and payment methods through their base class or interface references.
+
+#### **6. Provide Clear User Interaction:**
+
+- Allow the user to:
+  - Choose room types and view their details.
+  - Create a new booking with customer details.
+  - Select a payment method and process the payment.
+  - Display all bookings with details including room type, price, and customer information.
+
+```csharp
+// Main program demonstrating OOP principles in action
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create sample rooms, customer, and booking
+        Room standardRoom = new StandardRoom { RoomNumber = 101 };
+        Customer customer = new Customer { Name = "John Doe", ContactInfo = "john@example.com" };
+        Booking booking = new Booking
+        {
+            BookingID = 1,
+            Room = standardRoom,
+            Customer = customer,
+            CheckInDate = DateTime.Now,
+            CheckOutDate = DateTime.Now.AddDays(2)
+        };
+
+        // Calculate total and confirm booking
+        booking.CalculateTotalAmount();
+        booking.ConfirmBooking();
+
+        // Display payment options and process a payment
+        IPayment payment = new CreditCardPayment();
+        payment.ProcessPayment(booking.TotalAmount);
+        payment.GenerateReceipt();
+    }
+}
+```
+
+### **Expected Output:**
+
+```
+Room 101 has been booked.
+Booking confirmed for John Doe in room 101.
+Processing credit card payment of $200.00.
+Receipt generated for credit card payment.
+```
+
+### **Project Summary:**
+
+- **Encapsulation**: Protects data within classes using properties and private fields.
+- **Abstraction**: Provides simplified interfaces through abstract classes and interfaces.
+- **Inheritance**: Allows code reuse and extension of base class functionality.
+- **Polymorphism**: Enables flexible and dynamic interactions between different objects, such as rooms and payment methods.
+
+This project gives you hands-on experience with OOP in a practical, real-world context, highlighting the importance of good design principles in software development.
+
+### **Enhanced Project Assignment: Hotel Booking Management System with LINQ, Records, and CRUD Operations**
+
+**Objective:** This assignment will help you understand the practical application of the four pillars of Object-Oriented Programming (OOP) — **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** — along with **interfaces**, **LINQ**, **records**, and **CRUD (Create, Read, Update, Delete)** operations in a real-world scenario. You will build a Hotel Booking Management System demonstrating these concepts.
+
+### **Project Overview:**
+
+You will create a Hotel Booking Management System that manages room bookings, customer information, and payments. The system will include CRUD operations, room availability checks, payment processing, and customer management using OOP principles, LINQ for data querying, and records for immutable data representation.
+
+### **Instructions:**
+
+#### **1. Create the Base Classes, Interfaces, and Records**
+
+- **Define an abstract base class `Room`:**
+  - Properties: `RoomNumber`, `Price`, `IsAvailable`.
+  - Abstract method `CalculatePrice()` to be implemented by derived classes.
+  - Method `BookRoom()` to mark the room as booked.
+  
+- **Create an interface `IPayment`:**
+  - Define methods `ProcessPayment(decimal amount)` and `GenerateReceipt()`.
+
+- **Create a record `Customer`:**
+  - Define properties: `CustomerID`, `Name`, `ContactInfo`.
+  - Use the record to keep customer data immutable once created.
+
+#### **2. Implement Derived Classes Using Inheritance and Encapsulation**
+
+- **`StandardRoom` Class:**
+  - Inherit from `Room`.
+  - Implement `CalculatePrice()` to set a fixed price per night.
+
+- **`DeluxeRoom` Class:**
+  - Inherit from `Room`.
+  - Implement `CalculatePrice()` with an additional feature cost (e.g., extra amenities).
+
+- **`SuiteRoom` Class:**
+  - Inherit from `Room`.
+  - Implement `CalculatePrice()` with a premium price including extra features (e.g., breakfast, gym access).
+
+#### **3. Create Classes for Booking Management and Implement CRUD Operations**
+
+- **Create a `Booking` Class:**
+  - Properties: `BookingID`, `Room`, `Customer`, `CheckInDate`, `CheckOutDate`, `TotalAmount`.
+  - Methods: `CalculateTotalAmount()`, `ConfirmBooking()`, `CancelBooking()`.
+  - Use a `List<Booking>` to manage multiple bookings and perform CRUD operations.
+
+- **Implement CRUD Operations:**
+  - **Create**: Add new bookings to the list.
+  - **Read**: Display booking details using LINQ queries.
+  - **Update**: Modify existing bookings, such as changing check-in/out dates.
+  - **Delete**: Cancel bookings and remove them from the list.
+
+#### **4. Implement Payment Handling Using Interface**
+
+- **Create a `CreditCardPayment` Class:**
+  - Implement the `IPayment` interface.
+  - Define methods to process payments using credit cards and generate receipts.
+
+- **Create a `PayPalPayment` Class:**
+  - Implement the `IPayment` interface.
+  - Define methods to process payments via PayPal and generate receipts.
+
+#### **5. Main Program to Demonstrate the System with OOP Concepts**
+
+- **Demonstrate Encapsulation**:
+  - Use private fields and public properties to manage access to data in the `Room` and `Booking` classes.
+
+- **Demonstrate Abstraction**:
+  - Use the abstract class `Room` and interface `IPayment` to hide complex details and provide a simplified interface.
+
+- **Demonstrate Inheritance**:
+  - Show how `StandardRoom`, `DeluxeRoom`, and `SuiteRoom` inherit from `Room`.
+
+- **Demonstrate Polymorphism**:
+  - Use polymorphism to handle different types of rooms and payment methods through their base class or interface references.
+
+- **Demonstrate LINQ**:
+  - Use LINQ to filter bookings, sort rooms by price, and search for available rooms.
+
+### **Sample Code Structure:**
+
+Here's a guided code structure to help you start the project.
+
+```csharp
+
+class Program
+{
+    static List<Booking> bookings = new List<Booking>();
+
+    static void Main(string[] args)
+    {
+        // Create sample rooms and customers
+        Room standardRoom = new StandardRoom { RoomNumber = 101 };
+        Room deluxeRoom = new DeluxeRoom { RoomNumber = 102 };
+        Room suiteRoom = new SuiteRoom { RoomNumber = 103 };
+
+        Customer customer1 = new(1, "John Doe", "john@example.com");
+        Customer customer2 = new(2, "Jane Smith", "jane@example.com");
+
+        // Create bookings
+        CreateBooking(1, standardRoom, customer1, DateTime.Now, DateTime.Now.AddDays(3));
+        CreateBooking(2, deluxeRoom, customer2, DateTime.Now, DateTime.Now.AddDays(2));
+
+        // Display all bookings
+        DisplayBookings();
+
+        // Update booking
+        UpdateBooking(1, DateTime.Now, DateTime.Now.AddDays(4));
+
+        // Display all bookings after update
+        DisplayBookings();
+
+        // Cancel a booking
+        CancelBooking(1);
+
+        // Display bookings using LINQ query
+        DisplayAvailableRooms();
+
+        // Process payment
+        IPayment payment = new CreditCardPayment();
+        payment.ProcessPayment(300);
+        payment.GenerateReceipt();
+    }
+}
+```
+
+### **Expected Output:**
+
+```
+Room 101 has been booked.
+Booking confirmed for John Doe in room 101.
+Room 102 has been booked.
+Booking confirmed for Jane Smith in room 102.
+
+--- All Bookings ---
+Booking ID: 1, Customer: John Doe, Room: 101, Total: $300.00
+Booking ID: 2, Customer: Jane Smith, Room: 102, Total: $300.00
+
+Booking 1 updated successfully.
+
+--- All Bookings ---
+Booking ID: 1, Customer: John Doe, Room: 101, Total: $400.00
+Booking ID: 2, Customer: Jane Smith, Room: 102, Total: $300.00
+
+Room 101 is now available.
+Booking for John Doe has been canceled.
+
+--- Available Rooms ---
+Room 101 is available.
+
+Processing credit card payment of $300.00.
+Receipt generated for credit card payment.
+```
+
+### **Summary of the Assignment:**
+
+This project integrates the four pillars of OOP with practical coding techniques such as CRUD operations, LINQ for querying, and records for immutable data management:
+
+- **Encapsulation**: Manages data access within classes to protect the state.
+- **Abstraction**: Simplifies complex logic through abstract classes and interfaces.
+- **Inheritance**: Allows room classes to inherit common behaviors and attributes.
+- **Polymorphism**: Uses interfaces and base classes to interact with different objects flexibly.
+- **LINQ**: Provides an efficient way to query and manipulate data within the system.
+- **Records**: Ensures customer data remains consistent and immutable once created.
+
+This comprehensive assignment showcases the practical application of OOP concepts in building a real-world software system, equipping you with skills needed in professional software development.
+
 
