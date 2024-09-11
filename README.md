@@ -2844,3 +2844,137 @@ This project integrates the four pillars of OOP with practical coding techniques
 
 This comprehensive assignment showcases the practical application of OOP concepts in building a real-world e-commerce system, equipping you with skills needed in professional software development.
 
+## Composition, Interface, OOP, LINQ, Records, List Practice
+
+### **Key Concepts Covered in All Assignments:**
+
+- **Composition**: Classes are composed of other classes and records to build complex functionality.
+- **Interfaces**: Interfaces are used to decouple services like notifications.
+- **OOP**: Object-oriented principles are applied to create modular, maintainable, and extendable systems.
+- **LINQ**: Used to query and filter collections, making data manipulation easy and expressive.
+- **Records**: Demonstrates the use of immutable data structures with concise syntax.
+- **Lists**: Used to manage collections of items such as members, products, reservations, and transactions.
+
+### **Problem 12: Hotel Reservation System**
+
+**Objective:**  
+Build a hotel reservation system that manages rooms, customers, and reservations. The system will allow customers to book rooms, cancel reservations, and view available rooms using LINQ queries. This assignment will test your knowledge of composition, interfaces, OOP, records, and lists.
+
+### **Instructions:**
+
+1. **Define Records and Interfaces:**
+   - Create a `Room` record with properties: `Id`, `RoomNumber`, `Type`, and `PricePerNight`.
+   - Create a `Customer` record with properties: `Id`, `Name`, and `Email`.
+   - Define an interface `IReservationNotificationService` with methods `NotifyReservationSuccess(string message)` and `NotifyReservationFailure(string message)`.
+
+2. **Create Services for Notifications:**
+   - Implement `EmailReservationNotificationService` and `SMSReservationNotificationService` classes that implement the `IReservationNotificationService` interface.
+
+3. **Create the Reservation Class with Composition:**
+   - Create a `Reservation` class that contains a `Customer` object, a `Room` object, and properties like `ReservationId`, `CheckInDate`, and `CheckOutDate`.
+   - Include methods to check if the room is available and calculate the total reservation cost.
+
+4. **Create a ReservationManager Class with LINQ Operations:**
+   - Create a `ReservationManager` class that manages a list of reservations and rooms.
+   - Include methods to:
+     - Add a new reservation.
+     - Cancel a reservation.
+     - Find available rooms for a given date range using LINQ.
+     - Display all reservations.
+
+5. **Main Program to Demonstrate the System:**
+   - Use the `ReservationManager` to add rooms, create reservations, and find available rooms.
+   - Demonstrate sending notifications for successful and failed reservations.
+
+### **Expected Features and Output:**
+
+- Ability to book rooms and see available rooms.
+- Use LINQ to filter available rooms by date.
+- Calculate total reservation costs.
+- Notifications for successful and failed reservations.
+
+---
+
+### **AProblem 13: Fitness Club Membership Management**
+
+**Objective:**  
+Create a fitness club membership management system that handles members, trainers, and workout classes. The system will allow members to enroll in classes, assign trainers, and view class schedules using LINQ.
+
+### **Instructions:**
+
+1. **Define Records and Interfaces:**
+   - Create a `Member` record with properties: `Id`, `Name`, `MembershipType`, and `JoinDate`.
+   - Create a `Trainer` record with properties: `Id`, `Name`, and `Specialization`.
+   - Define an interface `IClassNotificationService` with methods `NotifyClassEnrollmentSuccess(string message)` and `NotifyClassEnrollmentFailure(string message)`.
+
+2. **Create Classes for Services:**
+   - Implement `EmailClassNotificationService` and `AppNotificationService` classes that implement the `IClassNotificationService` interface.
+
+3. **Create the WorkoutClass with Composition:**
+   - Create a `WorkoutClass` class that contains a list of `Member` objects and a `Trainer` object.
+   - Include properties like `ClassId`, `ClassName`, `Schedule`, and `MaxParticipants`.
+   - Include methods to enroll members, assign trainers, and check if the class is full.
+
+4. **Create a ClassManager Class with LINQ Operations:**
+   - Create a `ClassManager` class that manages a list of workout classes.
+   - Include methods to:
+     - Add new classes.
+     - Enroll members in classes.
+     - Find classes by trainer name using LINQ.
+     - Display the schedule of all classes.
+
+5. **Main Program to Demonstrate the System:**
+   - Use the `ClassManager` to add classes, assign trainers, and enroll members.
+   - Show class schedules and available spots.
+
+### **Expected Features and Output:**
+
+- Enroll members in workout classes with a maximum participant limit.
+- Use LINQ to find classes by trainer name.
+- Display class schedules.
+- Notify members upon successful or failed enrollment.
+
+---
+
+### **problem 14: Library Book Borrowing System**
+
+**Objective:**  
+Develop a library book borrowing system that allows members to borrow and return books. The system will manage books, members, and transactions, demonstrating the use of OOP, composition, interfaces, LINQ, and records.
+
+### **Instructions:**
+
+1. **Define Records and Interfaces:**
+   - Create a `Book` record with properties: `Id`, `Title`, `Author`, `Genre`, and `IsAvailable`.
+   - Create a `Member` record with properties: `Id`, `Name`, and `MembershipId`.
+   - Define an interface `IBorrowNotificationService` with methods `NotifyBorrowSuccess(string message)` and `NotifyBorrowFailure(string message)`.
+
+2. **Create Classes for Services:**
+   - Implement `EmailBorrowNotificationService` and `InAppBorrowNotificationService` classes that implement the `IBorrowNotificationService` interface.
+
+3. **Create the BorrowTransaction Class with Composition:**
+   - Create a `BorrowTransaction` class that contains a `Member` object and a `Book` object.
+   - Include properties such as `TransactionId`, `BorrowDate`, and `DueDate`.
+   - Include methods to mark books as borrowed or returned.
+
+4. **Create a LibraryManager Class with LINQ Operations:**
+   - Create a `LibraryManager` class that manages a list of books and borrow transactions.
+   - Include methods to:
+     - Add books to the library.
+     - Borrow a book (creating a transaction).
+     - Return a book.
+     - Find available books by genre using LINQ.
+     - Display all borrow transactions.
+
+5. **Main Program to Demonstrate the System:**
+   - Use the `LibraryManager` to add books, borrow books, and return books.
+   - Demonstrate finding available books by genre and managing transactions.
+
+### **Expected Features and Output:**
+
+- Ability to borrow and return books.
+- Use LINQ to filter available books by genre.
+- Display all borrow transactions with details.
+- Notify members upon successful or failed borrowing.
+
+---
+
